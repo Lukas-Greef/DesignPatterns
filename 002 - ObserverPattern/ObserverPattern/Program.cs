@@ -6,11 +6,14 @@ namespace ObserverPattern
     {
         static void Main(string[] args)
         {
-            WeatherData weatherData = new WeatherData();
+            WeatherData weatherData = 
+            new WeatherData();
             CurrentConditionDisplay currentDisplay =
             new CurrentConditionDisplay(weatherData);
             ForecastDisplay forecastDisplay =
             new ForecastDisplay(weatherData);
+            HeatWarningDisplay heatWarningDisplay = 
+            new HeatWarningDisplay(weatherData);
             StatisticsDisplay statisticsDisplay =
             new StatisticsDisplay(weatherData);
 
