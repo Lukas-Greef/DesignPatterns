@@ -16,7 +16,7 @@ namespace AdapterPattern
 
         public void Quack()
         {
-            Console.WriteLine("Quack");
+            Console.WriteLine("quack");
         }
     }
 }
