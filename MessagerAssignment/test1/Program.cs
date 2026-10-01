@@ -7,7 +7,7 @@
             NotificationManager manager = new NotificationManager();
 
 
-            manager.SendEmail("1@1.nl", "Email");
+            manager.SendEmail("1@1.nl", "schoolrooster verandert");
             manager.SendPush("jfhhec", "Bericht");
             manager.SendSms("12345678", "SMS");
             manager.SendWhatsapp("12345678", "whatsApp");

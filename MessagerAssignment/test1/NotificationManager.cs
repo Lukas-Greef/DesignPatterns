@@ -9,7 +9,13 @@
 
         public NotificationManager()
         {
-            email = new EmailNotificationService();
+            email = new TimestampDecorator(
+                new UrgentDecorator(
+                    new LoggingDecorator(
+                        new EmailNotificationService()
+                    )
+                )
+            );
             push = new PushNotificationService();
             sms = new SmsNotificationService();
             whatsapp = new WhatsappAdapter();
