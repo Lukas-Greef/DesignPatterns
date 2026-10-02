@@ -9,7 +9,7 @@ namespace NotificationApp
 
         public override void Send(string recipient, string message)
         {
-            Console.WriteLine("LOG: notificatie wordt verstuurd");
+            Console.WriteLine("logged notificatie naar " + recipient);
 
             notification.Send(recipient, message);
         }

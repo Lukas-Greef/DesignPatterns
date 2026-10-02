@@ -17,7 +17,13 @@
                 )
             );
             push = new PushNotificationService();
-            sms = new SmsNotificationService();
+            sms = new TimestampDecorator(
+                new UrgentDecorator(
+                    new LoggingDecorator(
+                        new SmsNotificationService()
+                    )
+                )
+            );
             whatsapp = new WhatsappAdapter();
         }
 
